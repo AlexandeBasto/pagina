@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>INVERSIONES LA ESMERALDA 1966 SAS</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
+    
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+    
+        <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+    
+        <!-- Font Awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    
+        <!-- Libraries Stylesheet -->
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+    </head>
+
+<body>
+   <!-- Navbar Start -->
+   <div class="container-fluid p-0 nav-bar">
+    <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
+        <a href="index.html" class="navbar-brand px-lg-4 m-0">
+            <img src="img/logo pana.png" alt="">
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+            <div class="navbar-nav ml-auto p-4">
+                <a href="index.html" class="nav-item nav-link">Inicio</a>
+                <a href="about.html" class="nav-item nav-link">Sobre nosotros</a>
+                <a href="service.html" class="nav-item nav-link">Servicios</a>
+                <a href="tienda.html" class="nav-item nav-link active">Tienda</a>
+                <a href="menu.html" class="nav-item nav-link">Menu</a>
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown">Páginas</a>
+                    <div class="dropdown-menu text-capitalize">
+                        <a href="reservation.html" class="dropdown-item">Reservation</a>
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contacto</a>
+
+                <div class="nav-item dropdown">
+                    <a href="carrito.html" class="nav-link dropdown-toggle position-relative" id="cartDropdown" data-toggle="dropdown">
+                        <i class="bi bi-cart3" style="font-size: 1.5rem;"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cartCount">
+                            0
+                        </span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right p-3" style="min-width: 300px;" id="cartItems">
+                        <!-- Aquí se mostrarán los artículos -->
+                        <p class="dropdown-item">Carrito vacío</p>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </nav>
+</div>
+<!-- Navbar End -->
+
+     <!-- Page Header Start -->
+    <div class="container-fluid page-header mb-5 position-relative overlay-bottom">
+        <div class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5" style="min-height: 400px">
+            <h1 class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase">Tienda</h1>
+            <div class="d-inline-flex mb-lg-5">
+                <p class="m-0 text-white"><a class="text-white" href="index.html">inicio</a></p>
+                <p class="m-0 text-white px-2">/</p>
+                <p class="m-0 text-white">Tienda</p>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+        <h1 class="text-center mb-4">Nuestros productos</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card h-100">
+                    <img src="img/mojicones.jpg" class="card-img-top product-img" alt="Producto 1" onclick="abrirModal('Producto 1', 'Descripción del producto 1', 10, 'img/mojicones.jpg')">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Producto 1</h5>
+                        <p class="card-text">Precio: $10</p>
+                        <button class="btn btn-primary" onclick="agregarAlCarrito('Producto 1', 10, 'img/mojicones.jpg')">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card h-100">
+                    <img src="img/roscon.jpg" class="card-img-top product-img" alt="Producto 2" onclick="abrirModal('Producto 2', 'Descripción del producto 2', 20, 'img/roscon.jpg')">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Producto 2</h5>
+                        <p class="card-text">Precio: $20</p>
+                        <button class="btn btn-primary" onclick="agregarAlCarrito('Producto 2', 20, 'img/roscon.jpg')">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card h-100">
+                    <img src="img/pan_resovado.jpg" class="card-img-top product-img" alt="Producto 3" onclick="abrirModal('Producto 3', 'Descripción del producto 3', 30, 'img/pan_resovado.jpg')">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Producto 3</h5>
+                        <p class="card-text">Precio: $30</p>
+                        <button class="btn btn-primary" onclick="agregarAlCarrito('Producto 3', 30, 'img/pan_resovado.jpg')">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <img id="modal-img" src="" alt="Producto">
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            <p id="modal-price"></p>
+            <button onclick="agregarAlCarrito()">Agregar al carrito</button>
+        </div>
+    </div>
+
+    <br>
+    <a class="row justify-content-center" href="carrito.html">Ver Carrito</a>
+
+ <!-- Footer Start -->
+ <div class="container-fluid footer text-white mt-5 pt-5 px-0 position-relative overlay-top">
+    <div class="row mx-0 pt-5 px-sm-3 px-lg-5 mt-4">
+        <div class="col-lg-3 col-md-6 mb-5">
+            <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">CONTACTENOS</h4>
+            <p><i class="fa fa-map-marker-alt mr-2"></i>Cra 3A #19-70 La Vega-Cundinamarca</p>
+            <p><i class="fa fa-phone-alt mr-2"></i>+57 3124478143</p>
+            <p class="m-0"><i class="fa fa-envelope mr-2"></i>panaderiaesmeralda@outlook.com</p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+            <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Síganos</h4>
+            <p>Mantente al día con las últimas novedades de nuestra panadería, donde la frescura y el sabor se unen en cada producto. </p>
+            <div class="d-flex justify-content-start">
+                <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="https://www.facebook.com/panaderiaesmeraldacom?mibextid=ZbWKwL" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-lg btn-outline-light btn-lg-square" href="https://www.instagram.com/panaderiaesmeraldacom?igsh=MTAxN2h5Mjl3dHEzbg==" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+            <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Horario de atención</h4>
+            <div>
+                <h6 class="text-white text-uppercase">Martes - Jueves</h6>
+                <p>8.00 AM - 8.00 PM</p>
+                <h6 class="text-white text-uppercase">Lunes - miercoles - viernes <br> sabado - domingo</h6>
+                <p>7.00 AM - 9.00 PM</p>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+            <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Newsletter</h4>
+            <p>Amet elitr vero magna sed ipsum sit kasd sea elitr lorem rebum</p>
+            <div class="w-100">
+                <div class="input-group">
+                    <input type="text" class="form-control border-light" style="padding: 25px;" placeholder="Your Email">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary font-weight-bold px-3">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid text-center text-white border-top mt-4 py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
+        <p class="mb-2 text-white">Copyright &copy; <a class="font-weight-bold" href="#">Domain</a>. All Rights Reserved.</p>
+        <p class="footer-credit" style="display: none;">Diseñado por <a class="font-weight-bold" href="https://htmlcodex.com">HTML Codex</a></p>
+    </div>
+</div>
+<!-- Footer End -->
+
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/tempusdominus/js/moment.min.js"></script>
+<script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+<script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+<!-- Contact Javascript File -->
+<script src="mail/jqBootstrapValidation.min.js"></script>
+<script src="mail/contact.js"></script>
+
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
+<script>
+// Función para abrir el modal con la información del producto
+function abrirModal(titulo, descripcion, precio, imgSrc) {
+    // Llenar el contenido del modal con la información del producto
+    document.getElementById('modal-title').innerText = titulo;
+    document.getElementById('modal-description').innerText = descripcion;
+    document.getElementById('modal-price').innerText = "Precio: $" + precio;
+    document.getElementById('modal-img').src = imgSrc;
+
+    // Mostrar el modal
+    document.getElementById('modal').style.display = "block";
+
+    // Asignar la función de agregar al carrito al botón del modal
+    document.querySelector('.modal-content button').onclick = function() {
+        agregarAlCarrito(titulo, precio, imgSrc); // Llamada a la función de agregar al carrito
+    };
+}
+
+// Función para cerrar el modal
+function cerrarModal() {
+    document.getElementById('modal').style.display = "none";
+}
+
+// Función para agregar un producto al carrito
+function agregarAlCarrito(titulo, precio, imgSrc) {
+    // Obtener el carrito desde localStorage (si no existe, inicializar un array vacío)
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+    // Verificar si el producto ya está en el carrito
+    let productoExistente = carrito.find(item => item.nombre === titulo);
+
+    if (productoExistente) {
+        // Si el producto ya está en el carrito, aumentar la cantidad
+        productoExistente.cantidad += 1;
+    } else {
+        // Si no está, agregar un nuevo producto con cantidad 1
+        let nuevoProducto = {
+            nombre: titulo,
+            precio: precio,
+            imagen: imgSrc, // URL de la imagen
+            cantidad: 1 // Cantidad inicial
+        };
+        carrito.push(nuevoProducto);
+    }
+
+    // Guardar el carrito actualizado en localStorage
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+
+    // Notificar al usuario (opcional)
+    alert(`Producto "${titulo}" agregado al carrito.`);
+
+    // Actualizar el contador del carrito y el contenido del dropdown
+    cargarCarrito();
+}
+
+// Función para cargar el carrito y actualizar el contador en la página
+function cargarCarrito() {
+    // Obtener el carrito de localStorage
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+    // Actualizar el contador del carrito
+    document.getElementById('cartCount').innerText = carrito.length;
+
+    // Obtener el contenedor donde se mostrarán los artículos del carrito
+    let cartItemsContainer = document.getElementById('cartItems');
+
+    // Limpiar el contenido anterior
+    cartItemsContainer.innerHTML = '';
+
+    if (carrito.length === 0) {
+        // Si el carrito está vacío, mostrar mensaje
+        cartItemsContainer.innerHTML = '<p class="dropdown-item">Carrito vacío</p>';
+    } else {
+        // Si hay productos en el carrito, mostrarlos
+        carrito.forEach(item => {
+            cartItemsContainer.innerHTML += `
+                <div class="dropdown-item d-flex justify-content-between align-items-center">
+                    <div>
+                        <img src="${item.imagen}" alt="${item.nombre}" style="width: 50px; height: 50px; object-fit: cover;">
+                    </div>
+                    <div>
+                        <strong>${item.nombre}</strong>
+                        <p>Precio: $${item.precio}</p>
+                        <p>Cantidad: ${item.cantidad}</p>
+                    </div>
+                </div>`;
+        });
+    }
+}
+// Cargar el carrito cuando la página se cargue
+document.addEventListener('DOMContentLoaded', cargarCarrito);
+</script>
+</body>
+</html>
