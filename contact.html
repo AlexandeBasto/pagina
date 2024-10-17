@@ -88,7 +88,7 @@
                 <div class="col-sm-4 text-center mb-3">
                     <i class="fa fa-2x fa-phone-alt mb-3 text-primary"></i>
                     <h4 class="font-weight-bold">Telefono</h4>
-                    <p>3124478143</p>
+                    <p>+57 3124478143</p>
                 </div>
                 <div class="col-sm-4 text-center mb-3">
                     <i class="far fa-2x fa-envelope mb-3 text-primary"></i>
@@ -106,29 +106,28 @@
                         <div id="success"></div>
                         <form name="sentMessage" id="contactForm" novalidate="novalidate">
                             <div class="control-group">
-                                <input type="text" class="form-control bg-transparent p-4" id="name" placeholder="Your Name"
+                                <input type="text" class="form-control bg-transparent p-4" id="name" placeholder="Tu Nombre"
                                     required="required" data-validation-required-message="Please enter your name" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <input type="email" class="form-control bg-transparent p-4" id="email" placeholder="Your Email"
+                                <input type="email" class="form-control bg-transparent p-4" id="email" placeholder="Tu Correo"
                                     required="required" data-validation-required-message="Please enter your email" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <input type="text" class="form-control bg-transparent p-4" id="subject" placeholder="Subject"
+                                <input type="text" class="form-control bg-transparent p-4" id="subject" placeholder="Sujeto"
                                     required="required" data-validation-required-message="Please enter a subject" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <textarea class="form-control bg-transparent py-3 px-4" rows="5" id="message" placeholder="Message"
+                                <textarea class="form-control bg-transparent py-3 px-4" rows="5" id="message" placeholder="Mensaje"
                                     required="required"
                                     data-validation-required-message="Please enter your message"></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div>
-                                <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit" id="sendMessageButton">Send
-                                    Message</button>
+                                <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit" id="sendMessageButton">Enviar mensaje </button>
                             </div>
                         </form>
                     </div>
@@ -206,6 +205,73 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        $(function () {
+
+$("#contactForm input, #contactForm textarea").jqBootstrapValidation({
+    preventSubmit: true,
+    submitError: function ($form, event, errors) {
+    },
+    submitSuccess: function ($form, event) {
+        event.preventDefault();
+        var name = $("input#name").val();
+        var email = $("input#email").val();
+        var subject = $("input#subject").val();
+        var message = $("textarea#message").val();
+
+        $this = $("#sendMessageButton");
+        $this.prop("disabled", true);
+
+        $.ajax({
+            url: "contact.php",
+            type: "POST",
+            data: {
+                name: name,
+                email: email,
+                subject: subject,
+                message: message
+            },
+            cache: false,
+            success: function () {
+                $('#success').html("<div class='alert alert-success'>");
+                $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                        .append("</button>");
+                $('#success > .alert-success')
+                        .append("<strong>Your message has been sent. </strong>");
+                $('#success > .alert-success')
+                        .append('</div>');
+                $('#contactForm').trigger("reset");
+            },
+            error: function () {
+                $('#success').html("<div class='alert alert-danger'>");
+                $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                        .append("</button>");
+                $('#success > .alert-danger').append($("<strong>").text("lo sentimos " + name + ", parece que nuestro servidor de correo no responde. ¡Por favor, inténtalo de nuevo más tarde!"));
+                $('#success > .alert-danger').append('</div>');
+                $('#contactForm').trigger("reset");
+            },
+            complete: function () {
+                setTimeout(function () {
+                    $this.prop("disabled", false);
+                }, 1000);
+            }
+        });
+    },
+    filter: function () {
+        return $(this).is(":visible");
+    },
+});
+
+$("a[data-toggle=\"tab\"]").click(function (e) {
+    e.preventDefault();
+    $(this).tab("show");
+});
+});
+
+$('#name').focus(function () {
+$('#success').html('');
+});
+    </script>
 </body>
 
 </html>
