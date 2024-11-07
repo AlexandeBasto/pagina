@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú con Desplazamiento en la Misma Página</title>
+    <style>
+        /* Estilo para ocultar secciones */
+        section {
+            display: none; /* Ocultar todas las secciones inicialmente */
+        }
+
+        /* Clase para mostrar la sección activa */
+        .active-section {
+            display: block;
+        }
+
+        /* Espacio superior para las secciones */
+        .section-content {
+            padding-top: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Inicio Menú de navegación -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="showSection('section1')">
+                    <img alt="Hombre de jengibre sobre una mesa de madera." height="200" src="https://storage.googleapis.com/a1aa/image/9IyzNhcije1mK66kUg4dHaNnhYYedBYQa0G35WxdDaFFCUuTA.jpg" width="200"/>
+            </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="showSection('section2')">
+                    <img alt="Hombre de jengibre sobre una mesa de madera." height="200" src="https://storage.googleapis.com/a1aa/image/9IyzNhcije1mK66kUg4dHaNnhYYedBYQa0G35WxdDaFFCUuTA.jpg" width="200"/>
+                </a>
+                <div class="menu-item-title">NAVIDAD</div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="showSection('section3')">Sección 3</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- Fin Menú de navegación -->
+
+<!-- Inicio Secciones de la página -->
+<div class="container section-content">
+    <section id="section1" class="active-section">
+        <h2>Sección 1</h2>
+        <p>Contenido de la Sección 1.</p>
+    </section>
+
+    <section id="section2">
+        <h2>Sección 2</h2>
+        <p>Contenido de la Sección 2.</p>
+    </section>
+
+    <section id="section3">
+        <h2>Sección 3</h2>
+        <p>Contenido de la Sección 3.</p>
+    </section>
+</div>
+<!-- Fin Secciones de la página -->
+
+<!-- JavaScript de Bootstrap y JQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    function showSection(sectionId) {
+        // Oculta todas las secciones
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.remove('active-section');
+        });
+        // Muestra solo la sección seleccionada
+        document.getElementById(sectionId).classList.add('active-section');
+    }
+</script>
+
+</body>
+</html>

@@ -24,6 +24,12 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/menu.css">
+
+
+    <style>
+
+    </style>
 </head>
 
 <body>
@@ -72,85 +78,92 @@
     <!-- Page Header End -->
 
 
-    <!-- Menu Start -->
-    <div class="container-fluid pt-5">
-        <div class="container">
-            <div class="section-title">
-                <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">Menu</h4>
-                <h1 class="display-4">Nuestros productos</h1>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <h1 class="mb-5">Hot Coffee</h1>
-                    <div class="row align-items-center mb-5">
-                        <div class="col-4 col-sm-3">
-                            <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/menu-1.jpg" alt="">
-                            <h5 class="menu-price">$5</h5>
-                        </div>
-                        <div class="col-8 col-sm-9">
-                            <h4>Black Coffee</h4>
-                            <p class="m-0">Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor</p>
-                        </div>
-                    </div>
-                    <div class="row align-items-center mb-5">
-                        <div class="col-4 col-sm-3">
-                            <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/menu-2.jpg" alt="">
-                            <h5 class="menu-price">$7</h5>
-                        </div>
-                        <div class="col-8 col-sm-9">
-                            <h4>Chocolete Coffee</h4>
-                            <p class="m-0">Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor</p>
-                        </div>
-                    </div>
-                    <div class="row align-items-center mb-5">
-                        <div class="col-4 col-sm-3">
-                            <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/menu-3.jpg" alt="">
-                            <h5 class="menu-price">$9</h5>
-                        </div>
-                        <div class="col-8 col-sm-9">
-                            <h4>Coffee With Milk</h4>
-                            <p class="m-0">Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor</p>
-                        </div>
-                    </div>
+    <div class="menu-title">Menú</div>
+    <div class="divider"></div>
+    <div class="menu-container">
+        <div class="menu-item">
+            <a class="nav-item" href="#" onclick="showSection('section1')">
+                <img alt="Hombre de jengibre sobre una mesa de madera." height="200" src="https://storage.googleapis.com/a1aa/image/9IyzNhcije1mK66kUg4dHaNnhYYedBYQa0G35WxdDaFFCUuTA.jpg" width="200"/>
+            </a>
+            <div class="menu-item-title">DESAYUNOS</div>
+        </div>
+        <div class="menu-item"href="#" onclick="showSection('section2')">
+            <img alt="Plato con comida y un tazón de sopa" height="200" src="https://storage.googleapis.com/a1aa/image/8AiI31BDQPLbMV6WhzCQidMqevHdWQyX0xeMbeF12XrHEocnA.jpg" width="200"/>
+            <div class="menu-item-title">BEBIDAS CALIENTES</div>
+        </div>
+        <div class="menu-item" href="#" onclick="showSection('section3')">
+            <img alt="Barras de chocolate con nueces y frutas secas" height="200" src="https://storage.googleapis.com/a1aa/image/zDPyhl9R4EpIMdykzu0oevH5MqDyhm3NwdVN1lMSXnQBBK3JA.jpg" width="200"/>
+            <div class="menu-item-title">BEBIDAS FRIAS</div>
+        </div>
+        <div class="menu-item" href="#" onclick="showSection('section4')">
+            <img alt="Cesta con panecillos redondos" height="200" src="https://storage.googleapis.com/a1aa/image/YQfWWIdQfioiCUH9fCkT56xO96UGWN0XZlmh84Wdk3bOEocnA.jpg" width="200"/>
+            <div class="menu-item-title">POSTRES</div>
+        </div>
+        <div class="menu-item" href="#" onclick="showSection('section5')">
+            <img alt="Cesta con panecillos redondos" height="200" src="https://storage.googleapis.com/a1aa/image/YQfWWIdQfioiCUH9fCkT56xO96UGWN0XZlmh84Wdk3bOEocnA.jpg" width="200"/>
+            <div class="menu-item-title">ENSALADAS DE FRUTAS</div>
+        </div>
+        <div class="menu-item" href="#" onclick="showSection('section1')">
+            <img alt="Cesta con panecillos redondos" height="200" src="https://storage.googleapis.com/a1aa/image/YQfWWIdQfioiCUH9fCkT56xO96UGWN0XZlmh84Wdk3bOEocnA.jpg" width="200"/>
+            <div class="menu-item-title">ENSALADAS VERDES</div>
+        </div>
+        <div class="menu-item" href="#" onclick="showSection('section1')">
+            <img alt="Cesta con panecillos redondos" height="200" src="https://storage.googleapis.com/a1aa/image/YQfWWIdQfioiCUH9fCkT56xO96UGWN0XZlmh84Wdk3bOEocnA.jpg" width="200"/>
+            <div class="menu-item-title">COPAS DE HELADO</div>
+        </div>
+        <div class="menu-item" href="#" onclick="showSection('section1')">
+            <img alt="Cesta con panecillos redondos" height="200" src="https://storage.googleapis.com/a1aa/image/YQfWWIdQfioiCUH9fCkT56xO96UGWN0XZlmh84Wdk3bOEocnA.jpg" width="200"/>
+            <div class="menu-item-title">BATIDOS SALUDABLES</div>
+        </div>
+        <div class="menu-item" href="#" onclick="showSection('section1')">
+            <img alt="Cesta con panecillos redondos" height="200" src="https://storage.googleapis.com/a1aa/image/YQfWWIdQfioiCUH9fCkT56xO96UGWN0XZlmh84Wdk3bOEocnA.jpg" width="200"/>
+            <div class="menu-item-title">SÁNDWICH</div>
+        </div>
+        <div class="menu-item" href="#" onclick="showSection('section1')">
+            <img alt="Cesta con panecillos redondos" height="200" src="https://storage.googleapis.com/a1aa/image/YQfWWIdQfioiCUH9fCkT56xO96UGWN0XZlmh84Wdk3bOEocnA.jpg" width="200"/>
+            <div class="menu-item-title">ARTESANALES</div>
+        </div>
+    </div>
+
+    <!-- Inicio Secciones de la página -->
+    <div class="container section-content">
+        <section id="section1" class="active-section">
+            <h2>Sección 1</h2>
+            <p>Contenido de la Sección 1.</p>
+        </section>
+
+        <section id="section2">
+            <h2>Sección 2</h2>
+            <p>Contenido de la Sección 2.</p>
+        </section>
+
+        <section id="section3">
+            <h2>Sección 3</h2>
+            <p>Contenido de la Sección 3.</p>
+        </section>
+    </div>
+    <!-- Fin Secciones de la página -->
+
+    <!-- Modal para mostrar la información del producto -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel">Título del Producto</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-                <div class="col-lg-6">
-                    <h1 class="mb-5">Cold Coffee</h1>
-                    <div class="row align-items-center mb-5">
-                        <div class="col-4 col-sm-3">
-                            <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/menu-1.jpg" alt="">
-                            <h5 class="menu-price">$5</h5>
-                        </div>
-                        <div class="col-8 col-sm-9">
-                            <h4>Black Coffee</h4>
-                            <p class="m-0">Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor</p>
-                        </div>
-                    </div>
-                    <div class="row align-items-center mb-5">
-                        <div class="col-4 col-sm-3">
-                            <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/menu-2.jpg" alt="">
-                            <h5 class="menu-price">$7</h5>
-                        </div>
-                        <div class="col-8 col-sm-9">
-                            <h4>Chocolete Coffee</h4>
-                            <p class="m-0">Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor</p>
-                        </div>
-                    </div>
-                    <div class="row align-items-center mb-5">
-                        <div class="col-4 col-sm-3">
-                            <img class="w-100 rounded-circle mb-3 mb-sm-0" src="img/menu-3.jpg" alt="">
-                            <h5 class="menu-price">$9</h5>
-                        </div>
-                        <div class="col-8 col-sm-9">
-                            <h4>Coffee With Milk</h4>
-                            <p class="m-0">Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor</p>
-                        </div>
-                    </div>
+                <div class="modal-body">
+                    <p id="productDescription">Descripción del producto</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
     </div>
     <!-- Menu End -->
-
 
     <!-- Footer Start -->
     <div class="container-fluid footer text-white mt-5 pt-5 px-0 position-relative overlay-top">
@@ -170,7 +183,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Open Hours</h4>
+                <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Horario de atención</h4>
                 <div>
                     <h6 class="text-white text-uppercase">Martes - Jueves</h6>
                     <p>8.00 AM - 8.00 PM</p>
@@ -178,47 +191,70 @@
                     <p>7.00 AM - 9.00 PM</p>
                 </div>
             </div>
+
             <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Newsletter</h4>
-                <p>Amet elitr vero magna sed ipsum sit kasd sea elitr lorem rebum</p>
-                <div class="w-100">
-                    <div class="input-group">
-                        <input type="text" class="form-control border-light" style="padding: 25px;" placeholder="Your Email">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary font-weight-bold px-3">Sign Up</button>
-                        </div>
+                <h6 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Contiene sustancias o productos que pueden causar alergias o intolerancias:</h6>
+                <div  class="d-flex justify-content-start">
+                    <div class="contend-img">
+                        <span>Trigo</span>
+                        <br>
+                        <img src="img/Trigo.png">
+                    </div>
+                    <div class="contend-img">
+                        <span>Huevo</span>
+                        <br>
+                        <img src="img/Huevos.png">
+                    </div>
+                    <div class="contend-img">
+                        <span>mani</span>
+                        <br>
+                        <img src="img/mani.png">
+                    </div>
+                    <div class="contend-img">
+                        <span>Lacteos</span>
+                        <br>
+                        <img src="img/Lacteos.png">
+                    </div>
+                    <div class="contend-img">
+                        <span>Frutos secos</span>
+                        <br>
+                        <img src="img/Frutos_secos.png">
                     </div>
                 </div>
             </div>
-        </div>
         <div class="container-fluid text-center text-white border-top mt-4 py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
-            <p class="mb-2 text-white">Copyright &copy; <a class="font-weight-bold" href="#">Domain</a>. All Rights Reserved.</p>
+            <p class="mb-2 text-white">Copyright &copy; <a class="font-weight-bold" href="#">Domain</a>. Todos los derechos reservados.</p>
             <p class="footer-credit" style="display: none;">Diseñado por <a class="font-weight-bold" href="https://htmlcodex.com">HTML Codex</a></p>
         </div>
     </div>
     <!-- Footer End -->
 
-
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- JavaScript de Bootstrap y JQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        function showProductInfo(title, description) {
+            document.getElementById('productModalLabel').textContent = title;
+            document.getElementById('productDescription').textContent = description;
+        }
+        function showSection(sectionId) {
+        // Oculta todas las secciones
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.remove('active-section');
+        });
+        // Muestra solo la sección seleccionada
+        document.getElementById(sectionId).classList.add('active-section');
+    }
+    </script>
 </body>
 
 </html>
